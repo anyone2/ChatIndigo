@@ -84,11 +84,6 @@ def allowControl(
 
 def main():
 
-    # indigo.devices[1823514063] # "3rd Floor Hallway"
-    # indigo.devices[1252158401] # "3rd Floor LED Lamp"
-    # indigo.devices[1747896389] # "Carriage House Desk Lamp"
-    # indigo.devices[31976241] # "Master Bathroom Light"
-
     reflector = 'YOUR_REFLECTOR'
     results, device_name = allowControl(reflector=reflector, 
                                         device_id=31976241,
