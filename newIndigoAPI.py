@@ -3,7 +3,6 @@
 from urllib.request import Request, urlopen
 import json
 import keyring
-from pprint import pprint
 
 
 def make_request(req_dict, reflector, Lookup):
@@ -90,7 +89,7 @@ def main():
     # indigo.devices[1747896389] # "Carriage House Desk Lamp"
     # indigo.devices[31976241] # "Master Bathroom Light"
 
-    reflector = 'macmini'
+    reflector = 'YOUR_REFLECTOR'
     results, device_name = allowControl(reflector=reflector, 
                                         device_id=31976241,
                                         device_action='toggle',
@@ -100,7 +99,7 @@ def main():
 
     if results[0]:
         if results[1] is not None:
-            # print('message sent')
+
             print(f"sent '{device_name['action']}' message "
                   f"to '{results[1]}' ")
         else:
